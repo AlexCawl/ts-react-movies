@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import style from "./GenresFilter.module.css";
-import { getGenres } from "../../service/apiService";
+import { getGenres } from "../../Services/apiService";
 
 export const GenresFilter = ({ genres, setGenres }: any) => {
   useEffect(() => {

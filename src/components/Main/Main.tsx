@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import style from "./Main.module.css";
 import { MovieList } from "../MovieList/MovieList";
 import { Outlet } from "react-router-dom";
-import { getMovies } from "../../service/apiService";
+import { getMovies } from "../../Services/apiService";
 import { NotificationManager } from "react-notifications";
 
 export const Main = () => {

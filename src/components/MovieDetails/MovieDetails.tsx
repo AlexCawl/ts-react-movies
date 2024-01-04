@@ -3,7 +3,7 @@ import CopyButton from "../../asset/copy.png";
 import EditButton from "../../asset/edit.png";
 import style from "./MovieDetails.module.css";
 import { useParams, useNavigate } from "react-router-dom";
-import { getMovieById } from "../../service/apiService";
+import { getMovieById } from "../../Services/apiService";
 import { MovieDetailsData } from "../../types";
 import NotFoundImage from "../../asset/404.png";
 import { NotificationManager } from "react-notifications";
