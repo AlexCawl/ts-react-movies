@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import style from "./GenresFilter.module.css";
-import { getGenres } from "../../Services/apiService";
+import { getGenres } from "../../service/apiService";
 
 export const GenresFilter = ({ genres, setGenres }: any) => {
   useEffect(() => {
@@ -11,14 +11,14 @@ export const GenresFilter = ({ genres, setGenres }: any) => {
       }
       setGenres((prev: any) => obj);
     });
-  }, []);
+  }, [setGenres]);
 
   const changeStateOfGenre = (genre: any) => () => {
     const newGenres: any = {
       ...genres,
     };
     newGenres[genre] = !newGenres[genre];
-    setGenres((prev: any) => newGenres);
+    setGenres(() => newGenres);
   };
 
   return (

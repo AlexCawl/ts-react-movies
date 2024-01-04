@@ -8,8 +8,7 @@ export const Movie = ({
   year,
   genres,
   selected,
-  onClick,
-  ...props
+  onClick
 }: MovieProps) => {
   return (
     <div

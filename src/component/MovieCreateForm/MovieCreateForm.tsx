@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
 import style from "./MovieCreateForm.module.css";
 import { useOutletContext } from "react-router-dom";
-import { createMovie } from "../../Services/apiService";
+import { createMovie } from "../../service/apiService";
 import { MovieDetailsData } from "../../types";
 import { HorizontalLine } from "../HorizontalLine/HorizontalLine";
 import { useNavigate } from "react-router-dom";

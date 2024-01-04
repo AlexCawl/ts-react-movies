@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./MoviesNotFound.module.css";
-import Sad from "../../asset/sad.png";
+import Sad from "../../assets/sad.png";
 
 export const MoviesNotFound = () => {
   return (

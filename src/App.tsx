@@ -1,10 +1,10 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Header } from "./components/Header/Header";
-import { Main } from "./components/Main/Main";
-import { MovieCreateForm } from "./components/MovieCreateForm/MovieCreateForm";
-import { MovieDetails } from "./components/MovieDetails/MovieDetails";
-import { MovieEditForm } from "./components/MovieEditForm/MovieEditForm";
+import { Header } from "./component/Header/Header";
+import { Main } from "./component/Main/Main";
+import { MovieCreateForm } from "./component/MovieCreateForm/MovieCreateForm";
+import { MovieDetails } from "./component/MovieDetails/MovieDetails";
+import { MovieEditForm } from "./component/MovieEditForm/MovieEditForm";
 
 function App() {
   return (

@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import style from "./MovieEditForm.module.css";
 import { useOutletContext, useParams } from "react-router-dom";
-import { editMovie, getMovieById, getMovies } from "../../Services/apiService";
+import { editMovie, getMovieById, getMovies } from "../../service/apiService";
 import { MovieDetailsData } from "../../types";
 import { HorizontalLine } from "../HorizontalLine/HorizontalLine";
 import { useNavigate } from "react-router-dom";
@@ -46,7 +46,7 @@ const initMovieData = {
 };
 
 export const MovieEditForm = () => {
-  const [setMovies, movies] = useOutletContext<any>();
+  const [setMovies] = useOutletContext<any>();
   const { id } = useParams();
   const navigate = useNavigate();
   const [movie, setMovie] = useState<MovieDetailsData>(initMovieData);
@@ -56,7 +56,7 @@ export const MovieEditForm = () => {
       if (!("rate" in response)) response.rate = 0;
       setMovie(response);
     });
-  }, []);
+  }, [id]);
 
   const saveData = async () => {
     try {

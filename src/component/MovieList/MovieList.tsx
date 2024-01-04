@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
-import type { MovieDetailsData, Movies } from "../../types";
-import { HorizontalLine } from "../HorizontalLine/HorizontalLine";
-import { Movie } from "../Movie/Movie";
+import React, {useEffect, useRef, useState} from "react";
+import type {MovieDetailsData, Movies} from "../../types";
+import {HorizontalLine} from "../HorizontalLine/HorizontalLine";
+import {Movie} from "../Movie/Movie";
 import style from "./MovieList.module.css";
-import { useNavigate, useParams } from "react-router-dom";
-import { GenresFilter } from "../GenresFilter/GenresFilter";
-import { MoviesNotFound } from "../MoviesNotFound/MoviesNotFound";
+import {useNavigate, useParams} from "react-router-dom";
+import {GenresFilter} from "../GenresFilter/GenresFilter";
+import {MoviesNotFound} from "../MoviesNotFound/MoviesNotFound";
 
 export const MovieList = ({ movies }: Movies) => {
   const navigate = useNavigate();
@@ -37,7 +37,6 @@ export const MovieList = ({ movies }: Movies) => {
       }, {});
       for (let genre in genres) {
         if (!(genre in hash) && genres[genre]) {
-          // Если этого жанра НЕТ у фильма И этот жанр включён, то не подходит фильмец
           return false;
         }
       }
@@ -46,12 +45,11 @@ export const MovieList = ({ movies }: Movies) => {
   };
 
   const onChange = () => {
-    setFilteredMovies((prev: any) => {
+    setFilteredMovies(() => {
       const filteredMoviesByInput = filterMoviesByInput(movies);
-      const filteredMoviesByInputAndGenres = filterMoviesByGenres(
-        filteredMoviesByInput
+      return filterMoviesByGenres(
+          filteredMoviesByInput
       );
-      return filteredMoviesByInputAndGenres;
     });
   };
 
