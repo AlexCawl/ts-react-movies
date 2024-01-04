@@ -7,14 +7,6 @@ export type MovieProps = {
   onClick: any;
 };
 
-export type MovieListProps = {
-  movies: MovieDetailsData[];
-};
-
-export type SearchBarProps = {
-  onChange: () => void;
-};
-
 export type MovieDetailsData = {
   id: number;
   title: string;

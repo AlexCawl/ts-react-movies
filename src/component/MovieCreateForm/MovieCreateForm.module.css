@@ -17,26 +17,6 @@
   color: #000000;
 }
 
-.label {
-  font-family: "Inter", serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  color: #000000;
-}
-
-.input {
-  width: 325px;
-  height: 44px;
-  background: #ecf1f7;
-  border-radius: 8px;
-  border: 0;
-  outline: none;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
 .footer {
   display: flex;
   flex-direction: row;

@@ -9,7 +9,7 @@ export const GenresFilter = ({ genres, setGenres }: any) => {
       for (let genre of response) {
         obj[genre] = false;
       }
-      setGenres((prev: any) => obj);
+      setGenres(() => obj);
     });
   }, [setGenres]);
 
@@ -23,7 +23,7 @@ export const GenresFilter = ({ genres, setGenres }: any) => {
 
   return (
     <div className={style.genres}>
-      {Object.keys(genres).map((genre, i) => (
+      {Object.keys(genres).map((genre) => (
         <span
           className={genres[genre] ? style.activeGenre : style.genre}
           key={genre}
